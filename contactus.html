@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+     <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+      <div class="top">
+      <nav>
+        <h2 class="logo">Rahi's <span>Portfolio</span></h2>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li id="About-Us"><a href="#">About Us</a></li>
+          <li id="Education"><a href="./education.html">Education</a></li>
+		  <li><a href="./honesty.html">Honesty</a></li>
+          <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    <div class="submissionform">
+      <br>
+    <form
+        name="Form"
+        method="post"
+        action="https://httpbin.org/post"
+        onsubmit = "return validate()">
+        
+        <table>
+          <tr>
+            <td><label><h4>Name</h4></label></td>
+            <td>
+              <input id="name" type="text" name="vname" placeholder="Enter Name" />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label><h4>Email Address</h4></label></td>
+            <td>
+              <input
+                id="email"
+                type="email"
+                name="vemail"
+                placeholder="Email"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label><h4>Street Address</h4></label></td>
+            <td>
+              <textarea
+                id="message"
+                name="vaddress"
+                placeholder="Message"
+              ></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label><h4>City</h4></label></td>
+            <td>
+              <input
+                id="city"
+                list="cities"
+                type="text"
+                name="vcity"
+                placeholder="City"
+              />
+            </td>
+            <datalist id="cities">
+              <option value="Toronto">Toronto</option>
+              <option value="Vancouver">Vancouver</option>
+              <option value="Montreal">Montreal</option>
+              <option value="Ottawa">Ottawa</option>
+              <option value="Victoria">Victoria</option>
+              <option value="Edmonton">Edmonton</option>
+              <option value="Halifax">Halifax</option>
+              <option value="Saskatoon">Saskatoon</option>
+              <option value="Calgary">Calgary</option>
+              <option value="Winnipeg">Winnipeg</option>
+              <option value ="Quebec">Quebec</option>
+              <option value="Regina">Regina</option>
+            </datalist>
+          </tr>
+
+          <tr>
+            <td><label><h4>Province</h4></label></td>
+            <td>
+              <input
+               id="province"
+               list="provinces"
+               type="text"
+               nam="vprovince"
+               placeholder="Province"
+               />
+               </td>
+              <datalist id="provinces">
+                <option value="Nova Scotia">Nova Scotia</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="Alberta">Alberta</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="Newfoundland and Labrador">Newfoundland</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Prince Edward Island">Prince Edward Island</option>
+                <option value="Quebec">Quebec</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+              </datalist>
+          </tr>
+
+          <tr>
+            <td><label><h4>Postal Code</h4></label></td>
+            <td>
+              <input
+                id="postcode"
+                type="text"
+                name="vpostcode"
+                placeholder="Postal Code"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label><h4>What is this about?</h4></label></td>
+            <td>
+            <div class="abt">
+              <label>
+                <input
+                  id="job offer"
+                  type="radio"
+                  name="abt"
+                  value="Job Offer"
+                  onclick="return Hourlyrate(1)"
+                />
+                Job Offer
+              </label>
+              <br>
+              <label>
+                <input
+                  id="School"
+                  type="radio"
+                  name="abt"
+                  value="School"
+                  onclick="return Hourlyrate(1)"
+                />
+                School
+              </label>
+            </br>
+              <label>
+                <input
+                  id="Other"
+                  type="radio"
+                  name="abt"
+                  value="Other"
+                  onclick="return Hourlyrate(0)"
+                />
+                Other
+              </label>
+            </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label id="hrate"><h4>Rate</h4></label></td>
+            <td>
+              <input
+                id="rate"
+                type="text"
+                name="rate"
+                placeholder="Hourly Rate"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label><h4>Message</h4></label></td>
+            <td>
+              <textarea name="vmsg" placeholder="Message" rows="5"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <p style="text-align: center">
+                <input onclick="validate()" class="btn smoothscroll btn-primary" type="submit" value="Submit form" />
+              </p>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+</body>
+</html>
